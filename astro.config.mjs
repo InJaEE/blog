@@ -6,6 +6,9 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://injaee.github.io',
+	base: '/blog',
+	// redirects: { '/':'/blog' },
 	integrations: [mdx(), sitemap()],
+	// devToolbar: { enabled: false }
 });
