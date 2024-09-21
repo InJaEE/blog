@@ -8,7 +8,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://injaee.github.io',
 	base: '/blog',
-	// redirects: { '/':'/blog' },
+	redirects: { '/': '/blog' },
 	integrations: [mdx(), sitemap()],
 	// devToolbar: { enabled: false }
 });

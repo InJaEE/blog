@@ -8,7 +8,8 @@ const { href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^\/]+/g);
-const isActive = href === pathname || href === '/' + subpath?.[0];
+const isActive = `/blog${href}` === pathname || href === '/' + subpath?.[1];
+
 ---
 <InternalLink href={href} class:list={[className, { active: isActive }]} {...props}>
 		<slot />
